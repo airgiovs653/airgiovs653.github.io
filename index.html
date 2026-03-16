@@ -8,55 +8,88 @@
             font-family: Arial, sans-serif;
             max-width: 900px;
             margin: auto;
-            line-height: 1.6;
             padding: 20px;
             color: #333;
+            line-height: 1.3;
+            font-size: 12.5px;
         }
-        h1, h2 {
-            color: #1a1a1a;
-        }
+
+        /* Header */
         h1 {
-            border-bottom: 3px solid #333;
-            padding-bottom: 5px;
+            text-align: center;
+            font-size: 32px;
+            color: #0a6ebd;
+            margin-bottom: 5px;
         }
+        h1 + p {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        hr.header-line {
+            border: 0;
+            height: 2px;
+            background: #0a6ebd;
+            width: 150px;
+            margin: 0 auto 15px auto;
+        }
+
         h2 {
-            margin-top: 30px;
+            color: #0a6ebd;
             border-bottom: 1px solid #ccc;
             padding-bottom: 3px;
+            margin-top: 15px;
         }
-        ul {
-            list-style-type: square;
-            margin-left: 20px;
+
+        p, li { margin: 3px 0; }
+        ul { margin-left: 20px; }
+        a { color: #0a6ebd; text-decoration: none; }
+        .job-title { font-weight: bold; font-size: 1em; }
+        .company { font-style: italic; }
+        .dates { color: #666; float: right; font-size: 11px; }
+
+        .two-column { display: flex; justify-content: space-between; margin-top: 10px; }
+        .column { width: 48%; border: 1px solid #ddd; padding: 8px; border-radius: 5px; background: #f9f9f9; }
+
+        /* Print-friendly adjustments */
+        @media print {
+            body { max-width: 100%; padding: 10px; font-size: 11pt; line-height: 1.3; color: #000; }
+            .two-column { display: block; }
+            .column { width: 100%; border: none; padding: 0; background: none; }
+            a { color: black; text-decoration: none; }
         }
-        p {
-            margin: 10px 0;
-        }
-        .job-title {
-            font-weight: bold;
-        }
-        .company {
-            font-style: italic;
-        }
-        .dates {
-            color: #666;
-        }
+
+        .icon { margin-right: 5px; color: #0a6ebd; }
     </style>
 </head>
 <body>
 
 <h1>Giovanni Alburo</h1>
-<p><strong>Licensed Electro-Technical Officer – Unlimited</strong></p>
+<p>Electro-Technical Officer – Unlimited</p>
+<hr class="header-line">
 
-<h2>Contact</h2>
-<p>Email: gcalburo@yahoo.com</p>
-<p>Phone: +639157245971</p>
-<p>Location: Cebu, Philippines</p>
-<p>GitHub: <a href="https://airgiovs653.github.io/">https://airgiovs653.github.io/</a></p>
-<p>LinkedIn: <a href="https://www.linkedin.com/in/alburo-giovanni-824b4274/">https://www.linkedin.com/in/alburo-giovanni-824b4274/</a></p>
+<div style="display: flex; align-items: center; justify-content: space-between;">
+    <div>
+
+
+<h2>Contact 📧</h2>
+<p><span class="icon">📧</span>Email: <a href="mailto:gcalburo@yahoo.com">gcalburo@yahoo.com</a></p>
+<p><span class="icon">📞</span>Phone: +63 915 724 5971</p>
+<p><span class="icon">📍</span>Location: Cebu, Philippines</p>
+<p><span class="icon">💻</span>GitHub: <a href="https://airgiovs653.github.io/">airgiovs653.github.io</a></p>
+<p><span class="icon">🔗</span>LinkedIn: <a href="https://www.linkedin.com/in/alburo-giovanni-824b4274/">linkedin.com/in/alburo-giovanni-824b4274</a></p>
+    </div>
+    <div>
+        <img src="4.jpg" alt="Giovanni Alburo" 
+             style="width:150px; height:150px; object-fit:cover; border-radius:50%; border:2px solid #0a6ebd;">
+    </div>
+</div>
 
 <h2>About Me</h2>
-<p>Currently serving as Electro-Technical Officer aboard <strong>m/y Um Alhoul (72m Private Yacht)</strong>, Doha, Qatar, with over 20 years of experience in electrical and electronic systems across commercial shipping and yachting. My background includes 13 years as a Marine Electrician at sea, 6 years as an Electronics Technician in manufacturing, and 3 years in the yachting sector — combining hands-on expertise with a solutions-driven approach.</p>
-
+<p>Currently serving as Electro-Technical Officer aboard <strong>m/y Um Alhoul (72m Private Yacht)</strong>, Doha, Qatar, with over 20 years of experience in electrical and electronic systems across commercial shipping and yachting. Background includes 13 years as Marine Electrician at sea, 6 years as Electronics Technician in manufacturing, and 3 years in the yachting sector — combining hands-on expertise with a solutions-driven approach.</p>
 <p>Bachelor’s in Electronics and Communications Engineering, Diploma in Industrial Technology (Electronics). Skilled in maintaining, troubleshooting, and upgrading:</p>
 <ul>
     <li>Electrical & High Voltage Systems</li>
@@ -70,38 +103,33 @@
 
 <h2>Work Experience</h2>
 
-<p class="job-title">Electro-Technical Officer</p>
+<p class="job-title">Electro-Technical Officer <span class="dates">Apr 2023 – Present</span></p>
 <p class="company">Amiri Yachts – m/y Um Alhoul (72m Private Yacht), Doha, Qatar</p>
-<p class="dates">April 2023 – Present</p>
 <ul>
     <li>Maintain and troubleshoot all onboard electrical and electronic systems.</li>
-    <li>Support AV/IT infrastructure (Crestron, Kaleidescape, Apple TV, Starlink, Lutron, etc.)</li>
+    <li>Support AV/IT infrastructure (Crestron, Kaleidescape, Apple TV, Starlink, Lutron).</li>
     <li>Overhaul and maintain electric motors and automation components.</li>
-    <li>Conduct diagnostics, planned and unplanned maintenance for safe vessel operation.</li>
+    <li>Diagnostics, planned & unplanned maintenance for safe vessel operation.</li>
     <li>Maintain detailed logs and equipment history.</li>
     <li>Recommend technical upgrades for efficiency and safety.</li>
     <li>Ensure compliance with ISM, MARPOL, and class regulations.</li>
 </ul>
 
-<p class="job-title">Electro-Technical Officer / ETR</p>
+<p class="job-title">Electro-Technical Officer / ETR <span class="dates">Mar 2018 – Feb 2023</span></p>
 <p class="company">Lindblad Expeditions – m/v National Geographic Endurance & Explorer, New York, USA</p>
-<p class="dates">Mar 2018 – Feb 2023</p>
 <ul>
-    <li>Maintenance and troubleshooting of electrical/electronic systems across Bridge, Engine Room, Guest, and Crew areas.</li>
-    <li>Support onboard AV/IT infrastructure and coordinate with shoreside IT teams.</li>
-    <li>Performed duties as Electro-Technical Rating (ETR) on earlier vessels within Lindblad.</li>
+    <li>Maintenance & troubleshooting of electrical/electronic systems across Bridge, Engine Room, Guest, Crew areas.</li>
+    <li>Supported AV/IT infrastructure & coordinated with shoreside IT teams.</li>
 </ul>
 
-<p class="job-title">Electrician / Assistant Electrician</p>
+<p class="job-title">Electrician / Assistant Electrician <span class="dates">Sep 2011 – Nov 2017</span></p>
 <p class="company">AIDA Cruises – Rostock, Germany</p>
-<p class="dates">Sep 2011 – Nov 2017</p>
 <ul>
     <li>Maintained lighting, elevators, motors, frequency drives, generators, CCTV, and emergency systems.</li>
 </ul>
 
-<p class="job-title">Electronic Technician</p>
+<p class="job-title">Electronic Technician <span class="dates">Oct 1996 – Jan 2004</span></p>
 <p class="company">Timex Phils Inc – Lapulapu City, Philippines</p>
-<p class="dates">Oct 1996 – Jan 2004</p>
 <ul>
     <li>Set up, calibrated, and maintained electronic/pneumatic/computer-controlled production tools.</li>
     <li>Troubleshot production issues and maximized line efficiency.</li>
@@ -109,53 +137,52 @@
 
 <h2>Education</h2>
 <ul>
-    <li>Bachelor of Science in Electronics and Communications Engineering – University of San Jose Recoletos, Cebu, Philippines (2017)</li>
-    <li>Diploma in Industrial Technology, Electronics Major – Center for Industrial Technology and Enterprise, Cebu, Philippines (1997)<br>
-        - Academic Excellence & Director’s List Awardee</li>
+    <li>BSc Electronics & Communications Engineering – University of San Jose Recoletos, Cebu, Philippines (2017)</li>
+    <li>Diploma in Industrial Technology, Electronics Major – Center for Industrial Technology and Enterprise, Cebu, Philippines (1997)</li>
+    <li>Academic Excellence & Director’s List Awardee</li>
 </ul>
 
 <h2>Certifications & Skills</h2>
 <ul>
-    <li>ETO Unlimited</li>
-    <li>STCW III/6, Basic Training, Advanced Fire Fighting, PSCRB, Medical First Aid, SSAT SDSD</li>
+    <li>ETO Unlimited, STCW III/6, Basic Training, Advanced Fire Fighting, PSCRB, Medical First Aid, SSAT SDSD</li>
     <li>Marine High Voltage, Marine Refrigeration, HVAC & Refrigeration Systems</li>
     <li>Electrical Diagnostics, Automation, PLC Programming, C++, Networking (Windows/Linux)</li>
     <li>Hydraulic & Pneumatic Systems, Technical Problem Solving, High-Stress Tolerance</li>
 </ul>
 
-<h2>Additional Skills</h2>
+<h2>Skills & Technical Interests ⚙️</h2>
+<div class="two-column">
+    <div class="column">
+        <ul>
+            <li>Networking, Servers, Virtualization (Docker, Proxmox)</li>
+            <li>Automation & Home Lab Projects</li>
+            <li>Electrical & High Voltage Systems</li>
+            <li>AV/IT Systems & Bridge Equipment</li>
+        </ul>
+    </div>
+    <div class="column">
+        <ul>
+            <li>PLC Programming, C++</li>
+            <li>Hydraulic & Pneumatic Systems</li>
+            <li>Microsoft Office (Excel, Outlook, PowerPoint, Access)</li>
+            <li>Problem Solving, Critical Decision-Making, Team Leadership</li>
+        </ul>
+    </div>
+</div>
+
+<h2>Hobbies 🎯</h2>
 <ul>
-    <li>Strong Communication & Conflict Resolution</li>
-    <li>Organized & Detail-Oriented</li>
-    <li>Critical Decision-Making in Time-Sensitive Situations</li>
-    <li>Advanced Electrical Diagnostics & System Interpretation</li>
-    <li>Proficient in Microsoft Office (Excel, Outlook, PowerPoint, Access)</li>
+    <li>Basketball, Programming, Table Soccer & Table Tennis, Reading</li>
 </ul>
 
-<h2>Hobbies</h2>
+<h2>Travel Documents & Visas ✈️</h2>
 <ul>
-    <li>Basketball</li>
-    <li>Programming</li>
-    <li>Table Soccer & Table Tennis</li>
-    <li>Reading</li>
+    <li>Philippine Passport – valid until 31.08.2031</li>
+    <li>Seaman's Book – valid until 31.08.2028</li>
+    <li>US Visa B1/B2 – valid until 12.11.2034</li>
+    <li>Schengen Visa – valid until 22.07.2028</li>
 </ul>
 
-<h2>Technical Interests & Homelab</h2>
-<ul>
-    <li>Building and maintaining a personal homelab for networking, servers, and self-hosted services</li>
-    <li>Experimenting with Linux servers, virtualization, and containerized applications (Docker, Proxmox)</li>
-    <li>Networking: firewalls, VPNs, and secure remote access</li>
-    <li>Automation and monitoring: scripts, home automation, and data logging projects</li>
-</ul>
-    
-<h2>Travel Documents & Visas</h2>
-<ul>
-  <li>Philippine Passport – valid until 31.08.2031</li>
-  <li>Seaman's Book – valid until 31.08.2028</li>
-  <li>US Visa B1/B2 – valid until 12.11.2034</li>
-  <li>Schengen Visa – valid until 22.07.2028</li>
-</ul>
-    
 <h2>References</h2>
 <p>Available upon request.</p>
 
